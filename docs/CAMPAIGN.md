@@ -126,12 +126,16 @@ Visually reviewed from timestamped contact sheets (`exports/analysis/`). 12 exis
 The excluded ranges live in `footage-plan.json → excludeRanges`. A render fails if any shot overlaps them.
 The footage audio is muted (`music.footageVolume: 0`) until it's confirmed whether the music in the compilation is licensed.
 
-## Open questions (awaiting organiser confirmation)
+## Decisions and status (26 Nov 2026)
 
-See `exports/previews/` for the approval stills, then answer these:
-1. Venue layout: are the three playing areas side by side within each main court, as drawn?
-2. Which spot is the stationary team on each main court (currently assumed **T1**, top-left)?
-3. Is the clockwise order T1 → T2 → T3 → B3 → B2 → B1 (crossing the nets at the ends)?
-4. Serving: after a missed second serve, is the free ball fed to the opposition **and** service passes to them, or are these two separate situations?
-5. Can "PERTH'S BIGGEST" be substantiated? (Until then: "ONE OF PERTH'S BIGGEST".)
-6. Total number of games per night and the booking link.
+- **Headline:** "PERTH'S FRIDAY NIGHT VOLLEYBALL SOCIALS". Switch `event.biggestClaimConfirmed` to `true` only once
+  "PERTH'S BIGGEST FRIDAY NIGHT INDOOR VOLLEYBALL SOCIALS" is substantiated.
+- **Music:** the compilation's own audio stays muted. Exports carry the generated SFX only; music is added in Instagram/TikTok.
+  Loudness is therefore about −19/−20 LUFS, which leaves headroom for the in-app music.
+- **Booking:** "BOOK YOUR SPOT." + "CHECK OUR INSTAGRAM FOR BOOKING DETAILS." No URL.
+- **Session:** 7:30 warm-up, 7:45 first game, 15-minute games, 10-minute break after game 4 (confirmed).
+- **Serving (confirmed):** first miss → same player gets a second attempt; second miss → free ball to the opposition,
+  and service transfers to the opposing team.
+- **Promotional finals rendered and verified:** `friday-socials-main-promo.mp4`, `friday-night-socials-teaser.mp4`, plus 3 thumbnails.
+- **Held for approval:** `friday-socials-full-explainer.mp4` and `friday-socials-rotation-guide.mp4`, pending sign-off of the
+  stationary position (proposed T1, top-left of each main court), the clockwise order T1→T2→T3→B3→B2→B1, and the serving animation.

@@ -1,21 +1,21 @@
 # Friday Night Volleyball Socials: suggested captions
 
 These are evergreen: no season, no start date, and no "coming soon". The socials are running now, every Friday night.
-Replace `[BOOKING LINK]` with the real link (none has been confirmed, so none is invented here).
+Booking: "Book your spot. Check our Instagram for booking details." No URL is used until one is confirmed.
 Tag all three hosts equally on every post: Chequers Volleyball Club, Crimson Volleyball Club (@crimson.vc) and DO Volleyball.
 Add the Chequers and DO Volleyball handles once they're confirmed.
-"Perth's biggest" is only used once the organisers have verified it.
+Headline: "Perth's Friday Night Volleyball Socials". "Perth's biggest" is only used once the organisers have verified it.
 
 ---
 
 ## Instagram Reels
 
 ### A. Main promo (`friday-socials-main-promo.mp4`)
-> Every Friday night. 🏐
+> Perth's Friday Night Volleyball Socials. Every Friday night. 🏐
 > 6 courts. Up to 84 players. All skill levels welcome.
 > 15-minute games, good volleyball, great company.
 > 7:30–10:00 PM at ECU Sport & Fitness, Mount Lawley.
-> See you on the court 👉 [BOOKING LINK]
+> Book your spot: check our Instagram for booking details. See you on the court!
 > Proudly hosted by Chequers × Crimson × DO Volleyball.
 >
 > #FridayNightVolleyball #PerthVolleyball #IndoorVolleyball #VolleyballSocials #PerthSport #MountLawley
@@ -26,7 +26,7 @@ Add the Chequers and DO Volleyball handles once they're confirmed.
 > 🔄 One team stays, everyone else rotates clockwise: new game, new opponents
 > 🏐 Missed your first serve? You get a second attempt.
 > All skill levels welcome. Save this and send it to a friend who's coming along.
-> Every Friday night · 7:30–10:00 PM · ECU Sport & Fitness, Mount Lawley · [BOOKING LINK]
+> Every Friday night · 7:30–10:00 PM · ECU Sport & Fitness, Mount Lawley · Booking details on our Instagram
 > Proudly hosted by Chequers × Crimson × DO Volleyball.
 >
 > #FridayNightVolleyball #PerthVolleyball #VolleyballRules #IndoorVolleyball #VolleyballSocials
@@ -43,7 +43,7 @@ Add the Chequers and DO Volleyball handles once they're confirmed.
 > Perth's Friday nights. 🏐
 > Six courts. Up to 84 players. All skill levels welcome.
 > Every Friday night · ECU Sport & Fitness, Mount Lawley · 7:30–10:00 PM
-> See you on the court 👉 [BOOKING LINK]
+> Book your spot: check our Instagram for booking details. See you on the court!
 >
 > #FridayNightVolleyball #PerthVolleyball #IndoorVolleyball #VolleyballSocials
 
@@ -51,7 +51,7 @@ Add the Chequers and DO Volleyball handles once they're confirmed.
 
 ## TikTok
 
-- **Main promo:** `Every Friday night 🏐 6 courts, up to 84 players, all skill levels welcome. ECU Mount Lawley, 7:30–10pm. See you on the court! [BOOKING LINK] #volleyball #perth #perthtok #fridaynight #volleyballtiktok`
+- **Main promo:** `Every Friday night 🏐 6 courts, up to 84 players, all skill levels welcome. ECU Mount Lawley, 7:30–10pm. Booking details on our Instagram. See you on the court! #volleyball #perth #perthtok #fridaynight #volleyballtiktok`
 - **Explainer:** `Never been to Friday Socials? Here's how it works 👇 #volleyball #volleyballrules #perthtok #learnontiktok`
 - **Rotation guide:** `POV: it's your first Friday Socials and you need to know where to go next 🔄 #volleyball #perthtok #volleyballtiktok`
 - **Teaser:** `Perth's Friday nights 🏐 good volleyball, great company. Every Friday. #volleyball #perth #perthtok #volleyballtiktok`

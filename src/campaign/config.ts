@@ -44,10 +44,11 @@ export const campaign = {
     bookingUrl: null as string | null,
     /** Short text CTA, e.g. "LINK IN BIO". */
     bookingCta: "BOOK YOUR SPOT.",
-    bookingHint: null as string | null,
+    /** Shown under the CTA while there is no booking URL. */
+    bookingHint: "CHECK OUR INSTAGRAM FOR BOOKING DETAILS." as string | null,
     /**
      * Only switch to true once the organisers confirm the claim can be
-     * substantiated. false → "ONE OF PERTH'S BIGGEST".
+     * substantiated. false → "PERTH'S FRIDAY NIGHT VOLLEYBALL SOCIALS".
      */
     biggestClaimConfirmed: false,
   },
@@ -128,16 +129,27 @@ export const campaign = {
     bpm: 120,
     volume: 0.85,
     /** Volume of the footage's own sound (crowd, squeaks, ball hits). */
-    // ⚠ 0 until confirmed: the supplied compilation appears to carry an added music
-    // track from ~19 s whose licence is unknown. Set to ~0.35 for natural sound.
+    // Kept at 0 by owner decision (26 Nov): the compilation's own music stays muted;
+    // exports carry the generated SFX only and music is added in Instagram/TikTok.
     footageVolume: 0,
     sfxVolume: 0.7,
   },
 
   text: {
     // Hook + reveal read as one line: "(ONE OF) PERTH'S BIGGEST · FRIDAY NIGHT INDOOR VOLLEYBALL SOCIALS"
-    hook: ["ONE OF", "PERTH'S", "BIGGEST"],
-    hookConfirmed: ["PERTH'S", "BIGGEST"],
+    // Headline = hook (0–3 s) + reveal (3–6 s), read as one line.
+    // Verified:   "PERTH'S BIGGEST · FRIDAY NIGHT · INDOOR VOLLEYBALL SOCIALS"
+    // Unverified: "PERTH'S · FRIDAY NIGHT · VOLLEYBALL SOCIALS"   (current)
+    headline: {
+      hook: ["PERTH'S", "FRIDAY", "NIGHT"],
+      reveal: ["VOLLEYBALL", "SOCIALS."],
+      revealKicker: "EVERY FRIDAY NIGHT",
+    },
+    headlineVerified: {
+      hook: ["PERTH'S", "BIGGEST"],
+      reveal: ["FRIDAY", "NIGHT"],
+      revealKicker: "INDOOR VOLLEYBALL SOCIALS",
+    },
     community: ["GOOD VOLLEYBALL.", "GREAT COMPANY."],
     stats: [
       "6 COURTS.",
@@ -189,7 +201,8 @@ export const campaign = {
 } as const;
 
 export type Campaign = typeof campaign;
-export const hookLines = () =>
+/** Headline copy, switching on whether the "biggest" claim has been verified. */
+export const headline = () =>
   campaign.event.biggestClaimConfirmed
-    ? campaign.text.hookConfirmed
-    : campaign.text.hook;
+    ? campaign.text.headlineVerified
+    : campaign.text.headline;

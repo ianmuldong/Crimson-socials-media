@@ -104,8 +104,13 @@ export const EventInfoCard: React.FC<{ short?: boolean }> = ({
             {e.bookingCta}
           </div>
         </div>
-        {e.bookingUrl ? (
-          <Kicker text={e.bookingUrl} startSec={1.7} size={34} />
+        {e.bookingUrl || e.bookingHint ? (
+          <Kicker
+            text={(e.bookingUrl ?? e.bookingHint) as string}
+            startSec={1.7}
+            size={28}
+            tracking={0.08}
+          />
         ) : null}
       </AbsoluteFill>
     </AbsoluteFill>
@@ -147,7 +152,7 @@ export const OrganiserEndCard: React.FC<{
           />
         ) : null}
         <div style={{ height: 30 }} />
-        <OrganiserCredit startSec={0.3} size={260} gap={30} />
+        <OrganiserCredit startSec={withEvent ? 0.3 : 0} size={260} gap={30} />
         {withCta ? (
           <div
             style={{
@@ -183,16 +188,18 @@ export const OrganiserEndCard: React.FC<{
                 {campaign.event.bookingCta}
               </div>
             </div>
-            {campaign.event.bookingUrl ? (
+            {campaign.event.bookingUrl || campaign.event.bookingHint ? (
               <div
                 style={{
                   fontFamily: F.body,
                   fontWeight: 700,
-                  fontSize: 32,
+                  fontSize: 28,
+                  letterSpacing: "0.04em",
+                  whiteSpace: "nowrap",
                   color: C.bone,
                 }}
               >
-                {campaign.event.bookingUrl}
+                {campaign.event.bookingUrl ?? campaign.event.bookingHint}
               </div>
             ) : null}
             <div
@@ -309,9 +316,15 @@ export const ClosingCard: React.FC<{ venueLines?: "full" | "short" }> = ({
             {e.bookingCta}
           </div>
         </div>
-        {e.bookingUrl ? (
-          <div style={{ marginTop: 12 }}>
-            <Kicker text={e.bookingUrl} startSec={1.3} size={30} />
+        {e.bookingUrl || e.bookingHint ? (
+          <div style={{ marginTop: 14 }}>
+            <Kicker
+              text={(e.bookingUrl ?? e.bookingHint) as string}
+              startSec={1.3}
+              size={26}
+              tracking={0.08}
+              color={C.white}
+            />
           </div>
         ) : null}
         <div style={{ height: 46 }} />

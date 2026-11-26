@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
-import { campaign, hookLines } from "../config";
+import { campaign, headline } from "../config";
 import { ClosingCard } from "../components/EndCards";
 import { FootageShot } from "../components/FootageShot";
 import { EdgeFades, Finish, Flash, TextArea } from "../components/Finish";
@@ -21,12 +21,12 @@ export const MainPromo: React.FC = () => {
         <FootageShot shot="hook" />
         <TextArea top={640}>
           <KineticHeadline
-            lines={hookLines() as unknown as string[]}
+            lines={headline().hook as unknown as string[]}
             size={230}
             align="left"
             startSec={0.15}
             staggerSec={0.14}
-            accentIndex={hookLines().length - 1}
+            accentIndex={headline().hook.length - 1}
             exitSec={2.6}
           />
         </TextArea>
@@ -42,7 +42,7 @@ export const MainPromo: React.FC = () => {
       <Sequence from={90} durationInFrames={90} name="Reveal text">
         <TextArea top={700}>
           <KineticHeadline
-            lines={["FRIDAY", "NIGHT"]}
+            lines={headline().reveal as unknown as string[]}
             size={250}
             align="left"
             staggerSec={0.1}
@@ -50,7 +50,7 @@ export const MainPromo: React.FC = () => {
           />
           <div style={{ height: 24 }} />
           <Kicker
-            text={campaign.event.kind}
+            text={headline().revealKicker}
             startSec={0.7}
             size={40}
             color={C.white}

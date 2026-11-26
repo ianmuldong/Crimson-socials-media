@@ -143,7 +143,15 @@ export const LogoLockup: React.FC<{
   size?: number;
   gap?: number;
   showNames?: boolean;
-}> = ({ startSec = 0, size = 250, gap = 36, showNames = false }) => {
+  /** Skip the animation and show the end state (stills / thumbnails). */
+  revealed?: boolean;
+}> = ({
+  startSec = 0,
+  size = 250,
+  gap = 36,
+  showNames = false,
+  revealed = false,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = startSec * fps;
@@ -157,11 +165,17 @@ export const LogoLockup: React.FC<{
       extrapolateRight: "clamp",
       easing: Easing.bezier(...e),
     });
-  const rise = k(0, 0.55);
-  const frameDraw = k(0.1, 0.7, ease.inOut);
-  const unmask = k(0.25, 0.85);
-  const sweep = k(0.7, 1.35, ease.inOut);
-  const sep = k(0.75, 1.05);
+  const kk = k;
+  const kf = (
+    a: number,
+    b: number,
+    e?: readonly [number, number, number, number],
+  ) => (revealed ? 1 : kk(a, b, e));
+  const rise = kf(0, 0.55);
+  const frameDraw = kf(0.1, 0.7, ease.inOut);
+  const unmask = kf(0.25, 0.85);
+  const sweep = kf(0.7, 1.35, ease.inOut);
+  const sep = kf(0.75, 1.05);
   const totalW = size * 3 + gap * 2;
   const per = size * 4;
   return (

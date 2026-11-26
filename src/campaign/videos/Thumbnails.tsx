@@ -14,7 +14,7 @@ export const Thumbnail: React.FC<{ variant: 1 | 2 | 3 }> = ({ variant }) => {
     variant === 1
       ? ["FRIDAY", "NIGHT", "VOLLEYBALL"]
       : variant === 2
-        ? ["6 COURTS.", "84 PLAYERS.", "EVERY FRIDAY", "NIGHT."]
+        ? ["6 COURTS.", "UP TO", "84 PLAYERS.", "EVERY FRIDAY", "NIGHT."]
         : ["GOOD", "VOLLEYBALL.", "GREAT", "COMPANY."];
   return (
     <AbsoluteFill style={{ backgroundColor: C.black }}>
@@ -56,7 +56,7 @@ export const Thumbnail: React.FC<{ variant: 1 | 2 | 3 }> = ({ variant }) => {
         ))}
       </AbsoluteFill>
       <div style={{ position: "absolute", bottom: 330, left: 0, right: 0 }}>
-        <LogoLockup size={150} gap={20} />
+        <LogoLockup size={150} gap={20} revealed />
       </div>
     </AbsoluteFill>
   );
