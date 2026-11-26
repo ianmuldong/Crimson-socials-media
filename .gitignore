@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+.env
+out
+
+# Remotion's downloaded browser
+.remotion
+
+# Large media: raw iPhone footage and regenerated proxies stay local by default.
+# (Files uploaded through the GitHub website are still committed.)
+public/footage/raw/*
+!public/footage/raw/README.md
+public/footage/processed/*
+!public/footage/processed/.gitkeep
+
+# Scratch renders made with plain `npx remotion render` (default folder)
+out/
