@@ -137,5 +137,5 @@ The footage audio is muted (`music.footageVolume: 0`) until it's confirmed wheth
 - **Serving (confirmed):** first miss → same player gets a second attempt; second miss → free ball to the opposition,
   and service transfers to the opposing team.
 - **Promotional finals rendered and verified:** `friday-socials-main-promo.mp4`, `friday-night-socials-teaser.mp4`, plus 3 thumbnails.
-- **Held for approval:** `friday-socials-full-explainer.mp4` and `friday-socials-rotation-guide.mp4`, pending sign-off of the
-  stationary position (proposed T1, top-left of each main court), the clockwise order T1→T2→T3→B3→B2→B1, and the serving animation.
+- **Approved (26 Nov):** stationary spot T1 (top-left of each main court), clockwise order T1→T2→T3→B3→B2→B1,
+  and the serving animation. Instructional finals: `friday-socials-full-explainer.mp4`, `friday-socials-rotation-guide.mp4`.

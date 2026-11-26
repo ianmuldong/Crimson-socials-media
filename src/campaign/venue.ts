@@ -1,5 +1,5 @@
 /**
- * ⚠ CONFIRM — VENUE + ROTATION LAYOUT (default assumption, not yet approved)
+ * VENUE + ROTATION LAYOUT — approved by the organisers on 26 Nov 2026
  *
  * Two main courts, each split into three playing areas (A, B, C). Every
  * playing area has a net across the middle, so each main court has six team
@@ -12,7 +12,7 @@
  *   │  B1  │  B2  │  B3  │
  *   └──────┴──────┴──────┘
  *
- * One spot per main court is STATIONARY (default T1 — to be confirmed).
+ * One spot per main court is STATIONARY (T1 — approved).
  * The other five teams step to the next spot clockwise after every game,
  * skipping (going around) the stationary spot.
  *

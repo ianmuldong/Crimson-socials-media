@@ -181,8 +181,9 @@ export const campaign = {
   },
 
   /**
-   * ⚠ CONFIRM — serving rules as briefed. The exact free-ball / service
-   * transfer mechanics are awaiting organiser confirmation.
+   * Serving rules — confirmed and animation approved on 26 Nov 2026:
+   * 1st miss → same player serves again; 2nd miss → free ball to the
+   * opposition; service then transfers to the opposing team.
    */
   serving: [
     {
