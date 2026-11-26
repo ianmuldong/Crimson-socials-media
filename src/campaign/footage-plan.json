@@ -1,93 +1,137 @@
 {
   "_readme": "Which clip plays in each shot. src is relative to public/ (null = labelled placeholder). Auto-filled by `npm run campaign:plan`; edit by hand any time.",
+  "_source": "friday-socials-compilation.mp4 (Google Drive, 54.7 s, 2160x3840 60 fps). Shots chosen by visual review.",
+  "_avoid": "22.2\u201324.9 s contains an existing promo flyer; 43.5 s\u2013end is black. No shot may overlap these.",
+  "excludeRanges": [
+    [22.2, 24.95],
+    [43.4, 999]
+  ],
   "shots": {
     "hook": {
-      "label": "HOOK · STRONGEST SPIKE OR BLOCK",
-      "src": null,
-      "trimStartSec": 0,
-      "rampAtSec": 0.9,
+      "label": "Block at the net (8 s) \u2014 slow-mo after 0.6 s",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 7.6,
+      "rampAtSec": 0.6,
       "slowRate": 0.5
     },
-    "reveal1": { "label": "SERVE OR ATTACK", "src": null, "trimStartSec": 0 },
-    "reveal2": { "label": "LONG RALLY", "src": null, "trimStartSec": 0 },
+    "reveal1": {
+      "label": "Server prepares + serves (35\u201337 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 34.9
+    },
+    "reveal2": {
+      "label": "Rally, white team (27\u201329 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 27.0
+    },
     "wide1": {
-      "label": "WIDE · MULTIPLE COURTS",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Rally with several courts behind (39\u201341 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 39.2
     },
     "wide2": {
-      "label": "ATMOSPHERE · PLAYERS ENJOYING",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Rally, many players on court (10\u201312 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 10.0
     },
     "stat1": {
-      "label": "WIDE · ALL SIX COURTS",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Wide: whole hall, multiple courts (0\u20132 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 0.0
     },
     "stat2": {
-      "label": "CROWDED HALL / MANY PLAYERS",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Wide: busy hall (2\u20134 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 2.0
     },
-    "stat3": { "label": "ACTION · DIG OR SET", "src": null, "trimStartSec": 0 },
+    "stat3": {
+      "label": "Diving dig (14 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 13.3
+    },
     "stat4": {
-      "label": "COMMUNITY · GROUP / HIGH FIVES",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Players regrouping after the dig (15\u201317 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 15.2
     },
     "community1": {
-      "label": "EXCITING RALLY",
-      "src": null,
-      "trimStartSec": 0,
-      "rampAtSec": 0.6,
-      "slowRate": 0.6
+      "label": "Close-up attack jump (26 s) \u2014 slow-mo",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 25.85,
+      "rampAtSec": 0.5,
+      "slowRate": 0.5
     },
-    "community2": { "label": "CELEBRATION", "src": null, "trimStartSec": 0 },
+    "community2": {
+      "label": "Player laughing (20\u201322 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 20.3
+    },
     "community3": {
-      "label": "FRIENDS · LAUGHING / CHATTING",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Close rally action (4\u20136 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 4.1
     },
     "community4": {
-      "label": "BIG POINT REACTION",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Double block jump (19 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 18.5
     },
     "closing": {
-      "label": "WIDE · END OF NIGHT ATMOSPHERE",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Wide hall atmosphere (0\u20133 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 0.3
     },
-    "finale1": { "label": "RALLY BUILD-UP", "src": null, "trimStartSec": 0 },
+    "finale1": {
+      "label": "Rally build-up (30\u201333 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 30.0
+    },
     "finale2": {
-      "label": "SPIKE · SLOW MOTION",
-      "src": null,
-      "trimStartSec": 0,
+      "label": "Double block \u2014 slow-mo",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 18.3,
       "rampAtSec": 0.4,
       "slowRate": 0.5
     },
-    "finale3": { "label": "CELEBRATION", "src": null, "trimStartSec": 0 },
+    "finale3": {
+      "label": "Dive dig + recovery (14\u201317 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 13.8
+    },
     "teaser1": {
-      "label": "TEASER · STRONGEST HIGHLIGHT",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Block at the net",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 8.0
     },
     "teaser2": {
-      "label": "TEASER · WIDE COURTS",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Wide hall",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 0.2
     },
     "teaser3": {
-      "label": "TEASER · CROWD / PLAYERS",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Players on court",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 10.0
     },
-    "teaser4": { "label": "TEASER · RALLY", "src": null, "trimStartSec": 0 },
+    "teaser4": {
+      "label": "Rally",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 27.5
+    },
     "teaser5": {
-      "label": "TEASER · CELEBRATION",
-      "src": null,
-      "trimStartSec": 0
+      "label": "Player laughing",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 20.1
+    },
+    "montage5": {
+      "label": "Close rally action (4\u20137 s)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 4.2
+    },
+    "newhere": {
+      "label": "Wide hall (dimmed background)",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "trimStartSec": 0.0
     }
   }
 }

@@ -75,10 +75,10 @@ Preview live with `npm run dev`, then open **FridaySocials** in the sidebar.
 
 | Asset | Where | Status |
 | --- | --- | --- |
-| Friday Socials footage (individual clips or one compilation) | `public/footage/raw/` | ⏳ needed |
-| Chequers logo | `public/brand/logos/chequers.png` | ⏳ needed |
-| Crimson logo | `public/brand/logos/crimson.png` | ⏳ needed |
-| DO Volleyball logo | `public/brand/logos/do-volleyball.png` | ⏳ needed |
+| Friday Socials footage | `public/footage/raw/friday-socials-compilation.mp4` (git-ignored) | ✅ 54.7 s compilation from Google Drive, 26 Nov |
+| Chequers logo | `public/brand/logos/chequers.jpg` | ✅ supplied (JPEG on black; transparent PNG preferred) |
+| Crimson logo | `public/brand/logos/crimson.png` | ✅ supplied (transparent PNG) |
+| DO Volleyball logo | `public/brand/logos/do-volleyball.jpg` | ✅ supplied (JPEG on black; transparent PNG preferred) |
 | Licensed music (optional) | `public/audio/music/` | optional |
 | Booking link | `config.ts → event.bookingUrl` | ⏳ needed |
 | Chequers / DO Volleyball social handles | `config.ts → orgs[].handle` | optional |
@@ -88,7 +88,32 @@ Preview live with `npm run dev`, then open **FridaySocials** in the sidebar.
 1. **Logos:** save each logo to Files. Then on github.com in Safari, open `public/brand/logos/` on the campaign branch, tap **Add file → Upload files**, and rename to the names above. You can also simply attach the images in the Claude chat.
 2. **Footage:** GitHub's website accepts files up to **25 MB each**. Trim clips in Photos (5–20 s each is ideal), or record at 1080p 30/60. Upload to `public/footage/raw/` the same way.
    For many or large clips, use a computer: AirDrop to a Mac, then `git add -f public/footage/raw/*` (raw footage is git-ignored by default to keep the repo small and private) or run the whole project locally.
-3. **Privacy:** if the repository is public, footage committed to it is public too. Keep it private, or render locally.
+3. **Privacy:** this GitHub repository is **public**. Footage and anything rendered from it (previews,
+   storyboards, contact sheets, thumbnails, finals) is git-ignored and never pushed. Finished videos are
+   delivered directly in the Claude chat. If you make the repository private, they can be committed too.
+
+## Footage review (26 Nov compilation)
+
+Visually reviewed from timestamped contact sheets (`exports/analysis/`). 12 existing cuts were detected.
+
+| Time | Content | Used for |
+| --- | --- | --- |
+| 0–4 s | Wide shots of the whole hall, several courts in play | stats, wide, teaser, closing |
+| 4–7 s | Close rally action | montage, community |
+| 7.6–9.5 s | Block at the net | hook (slow-mo), teaser |
+| 10–12 s | Rally, many players | wide, teaser |
+| 13–17 s | Diving dig + recovery | stat, finale |
+| 18–20 s | Double block jump | community, finale (slow-mo) |
+| 20–22 s | Player laughing | community, teaser |
+| **22.2–24.9 s** | **Existing third-party promo flyer: excluded** | — |
+| 25.8–27 s | Close-up attack jump | community (slow-mo) |
+| 27–33 s | Rallies | reveal, finale, teaser |
+| 35–37 s | Serve: preparation and contact | reveal |
+| 39–42 s | Rally with several courts behind | wide |
+| **43.5 s–end** | **Black frames: excluded** | — |
+
+The excluded ranges live in `footage-plan.json → excludeRanges`. A render fails if any shot overlaps them.
+The footage audio is muted (`music.footageVolume: 0`) until it's confirmed whether the music in the compilation is licensed.
 
 ## Open questions (awaiting organiser confirmation)
 

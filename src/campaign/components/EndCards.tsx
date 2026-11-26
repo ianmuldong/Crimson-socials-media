@@ -9,7 +9,7 @@ import {
 import { campaign } from "../config";
 import { C, ease, F } from "../theme";
 import { Kicker, KineticHeadline, Rule } from "./Kinetic";
-import { LogoLockup } from "./Logos";
+import { OrganiserCredit } from "./Logos";
 
 /** Premium dark backdrop with a slow light drift. */
 export const Backdrop: React.FC<{ intensity?: number }> = ({
@@ -146,22 +146,8 @@ export const OrganiserEndCard: React.FC<{
             staggerSec={0.08}
           />
         ) : null}
-        <div style={{ marginTop: 40 }}>
-          <Kicker
-            text={campaign.text.proudlyRunBy}
-            startSec={0.3}
-            size={32}
-            color={C.mute}
-          />
-        </div>
-        <LogoLockup startSec={0.4} size={250} gap={24} />
-        <Kicker
-          text={campaign.text.orgLine}
-          startSec={0.75}
-          size={30}
-          tracking={0.1}
-          color={C.white}
-        />
+        <div style={{ height: 30 }} />
+        <OrganiserCredit startSec={0.3} size={260} gap={30} />
         {withCta ? (
           <div
             style={{
@@ -294,22 +280,7 @@ export const ClosingCard: React.FC<{ venueLines?: "full" | "short" }> = ({
           </div>
         ) : null}
         <div style={{ height: 56 }} />
-        <Kicker
-          text={campaign.text.proudlyRunBy}
-          startSec={1.4}
-          size={28}
-          color={C.mute}
-        />
-        <div style={{ height: 22 }} />
-        <LogoLockup startSec={1.5} size={236} gap={22} />
-        <div style={{ height: 24 }} />
-        <Kicker
-          text={campaign.text.orgLine}
-          startSec={1.75}
-          size={30}
-          tracking={0.1}
-          color={C.white}
-        />
+        <OrganiserCredit startSec={1.4} size={250} gap={30} />
       </AbsoluteFill>
     </AbsoluteFill>
   );

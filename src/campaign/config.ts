@@ -11,8 +11,15 @@ export type Org = {
   id: "chequers" | "crimson" | "do";
   name: string;
   short: string;
-  /** Path inside public/. Drop the official transparent PNG/SVG there. */
+  /** Path inside public/. The official file, used unmodified. */
   logo: string;
+  /**
+   * Where the artwork sits inside the image file, as fractions [left, top, right, bottom].
+   * Used only to size the three logos to equal visual weight (empty margins are
+   * cropped in the display, the file itself is never changed). Re-measure if you
+   * replace a logo; [0, 0, 1, 1] = use the whole image.
+   */
+  artBox: [number, number, number, number];
   handle: string | null;
 };
 
@@ -46,12 +53,15 @@ export const campaign = {
   },
 
   /** All three organisers are equal collaborators — order is alphabetical. */
+  // Official files supplied 26 Nov 2026: Chequers + DO as JPEG on black
+  // (no transparency), Crimson as a transparent PNG. Used unmodified.
   orgs: [
     {
       id: "chequers",
       name: "Chequers Volleyball Club",
       short: "CHEQUERS",
-      logo: "brand/logos/chequers.png",
+      logo: "brand/logos/chequers.jpg",
+      artBox: [0, 0, 1, 1],
       handle: null,
     },
     {
@@ -59,13 +69,15 @@ export const campaign = {
       name: "Crimson Volleyball Club",
       short: "CRIMSON",
       logo: "brand/logos/crimson.png",
+      artBox: [0.066, 0, 0.909, 0.994],
       handle: "@crimson.vc",
     },
     {
       id: "do",
       name: "DO Volleyball",
       short: "DO VOLLEYBALL",
-      logo: "brand/logos/do-volleyball.png",
+      logo: "brand/logos/do-volleyball.jpg",
+      artBox: [0.176, 0.086, 0.824, 0.908],
       handle: null,
     },
   ] satisfies Org[],
@@ -116,7 +128,9 @@ export const campaign = {
     bpm: 120,
     volume: 0.85,
     /** Volume of the footage's own sound (crowd, squeaks, ball hits). */
-    footageVolume: 0.35,
+    // ⚠ 0 until confirmed: the supplied compilation appears to carry an added music
+    // track from ~19 s whose licence is unknown. Set to ~0.35 for natural sound.
+    footageVolume: 0,
     sfxVolume: 0.7,
   },
 

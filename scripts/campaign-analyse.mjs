@@ -105,6 +105,7 @@ const motionPerSecond = (file) => {
 };
 
 const loudnessPerSecond = (file) => {
+  // one RMS reading per second of audio
   const r = run(
     "ffmpeg",
     [
@@ -114,7 +115,7 @@ const loudnessPerSecond = (file) => {
       file,
       "-vn",
       "-af",
-      "astats=metadata=1:reset=48000,ametadata=print:key=lavfi.astats.Overall.RMS_level:file=-",
+      "aresample=48000,asetnsamples=n=48000:p=0,astats=metadata=1:reset=1,ametadata=print:key=lavfi.astats.Overall.RMS_level:file=-",
       "-f",
       "null",
       "-",

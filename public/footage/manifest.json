@@ -1,0 +1,39 @@
+{
+  "updatedAt": "2026-11-26T10:32:12.563Z",
+  "clips": [
+    {
+      "source": "friday-socials-compilation.mp4",
+      "src": "footage/processed/friday-socials-compilation-60fps.mp4",
+      "durationSec": 54.658,
+      "fps": 60,
+      "original": {
+        "width": 2160,
+        "height": 3840,
+        "fps": 60,
+        "codec": "hevc",
+        "hdr": false
+      },
+      "fit": "crop",
+      "hasAudio": true,
+      "caption": "",
+      "processedAt": "2026-11-26T10:31:50.181Z"
+    },
+    {
+      "source": "friday-socials-compilation.mp4",
+      "src": "footage/processed/friday-socials-compilation-30fps.mp4",
+      "durationSec": 54.667,
+      "fps": 30,
+      "original": {
+        "width": 2160,
+        "height": 3840,
+        "fps": 60,
+        "codec": "hevc",
+        "hdr": false
+      },
+      "fit": "crop",
+      "hasAudio": true,
+      "caption": "",
+      "processedAt": "2026-11-26T10:32:12.563Z"
+    }
+  ]
+}

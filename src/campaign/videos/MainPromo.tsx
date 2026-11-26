@@ -69,7 +69,7 @@ export const MainPromo: React.FC = () => {
         <TextArea top={720}>
           <KineticHeadline
             lines={["RUNNING"]}
-            styles={[{ size: 120, font: "display", outline: true }]}
+            styles={[{ size: 120, font: "display", color: C.accent2 }]}
             align="left"
           />
           <KineticHeadline

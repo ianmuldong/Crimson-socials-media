@@ -4,8 +4,8 @@ import { campaign } from "../config";
 import { Backdrop, ClosingCard } from "../components/EndCards";
 import { FootageShot } from "../components/FootageShot";
 import { EdgeFades, Finish, Flash, TextArea } from "../components/Finish";
-import { Kicker, KineticHeadline } from "../components/Kinetic";
-import { LogoLockup } from "../components/Logos";
+import { KineticHeadline } from "../components/Kinetic";
+import { OrganiserCredit } from "../components/Logos";
 import { SessionTimeline } from "../components/SessionTimeline";
 import { MusicBed, Sfx } from "../components/Sfx";
 import {
@@ -67,7 +67,7 @@ export const FullExplainer: React.FC = () => (
       <FootageShot shot="wide1" />
     </Sequence>
     <Sequence from={225} durationInFrames={75} name="Montage 5">
-      <FootageShot shot="community2" />
+      <FootageShot shot="montage5" />
     </Sequence>
     <Sequence durationInFrames={120} name="Montage text 1">
       <TextArea top={700}>
@@ -118,26 +118,13 @@ export const FullExplainer: React.FC = () => (
           size={96}
           staggerSec={0.08}
         />
-        <Kicker
-          text={campaign.text.proudlyRunBy}
-          startSec={0.4}
-          size={32}
-          color={C.mute}
-        />
-        <LogoLockup startSec={0.55} size={250} gap={24} showNames />
-        <Kicker
-          text={campaign.text.orgLine}
-          startSec={1.0}
-          size={30}
-          tracking={0.1}
-          color={C.white}
-        />
+        <OrganiserCredit startSec={0.4} size={260} gap={30} showNames />
       </AbsoluteFill>
     </Sequence>
 
     {/* 3 — new here? */}
     <Sequence from={T.newHere} durationInFrames={120} name="New here">
-      <FootageShot shot="stat2" />
+      <FootageShot shot="newhere" />
       <AbsoluteFill style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
       <TextArea top={720}>
         <KineticHeadline

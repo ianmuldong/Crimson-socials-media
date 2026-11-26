@@ -16,3 +16,12 @@ public/footage/processed/*
 
 # Scratch renders made with plain `npx remotion render` (default folder)
 out/
+
+# The GitHub repository is PUBLIC: never commit anything that contains real
+# footage (players' faces). Previews, storyboards, contact sheets, thumbnails and
+# final renders stay local and are delivered directly (or via a private channel).
+exports/analysis/
+exports/previews/*.mp4
+exports/previews/storyboards/
+exports/final/
+exports/reels/*.mp4

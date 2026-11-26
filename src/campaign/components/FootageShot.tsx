@@ -120,6 +120,26 @@ export const FootageShot: React.FC<{
     { extrapolateRight: "clamp" },
   );
   const available = hasAsset(s.src);
+  // Slow motion: use the 60 FPS proxy when it exists so every frame is unique.
+  const slow60 = s.src ? s.src.replace(/-30fps\.mp4$/, "-60fps.mp4") : null;
+  const slowSrc = slow60 && hasAsset(slow60) ? slow60 : (s.src ?? "");
+  // QC guard: never show excluded source time (e.g. third-party graphics, black frames).
+  if (available) {
+    const secs = durationInFrames / fps;
+    const used =
+      s.rampAtSec !== undefined && s.slowRate
+        ? s.rampAtSec + Math.max(0, secs - s.rampAtSec) * s.slowRate
+        : secs;
+    const end = s.trimStartSec + used;
+    for (const [a, b] of (plan as { excludeRanges?: number[][] })
+      .excludeRanges ?? []) {
+      if (s.trimStartSec < b && end > a) {
+        throw new Error(
+          `Shot "${shot}" uses source ${s.trimStartSec.toFixed(2)}–${end.toFixed(2)} s, which overlaps the excluded range ${a}–${b} s. Change its trimStartSec in footage-plan.json.`,
+        );
+      }
+    }
+  }
   const vol = withSound ? campaign.music.footageVolume : 0;
 
   let body: React.ReactNode;
@@ -140,7 +160,7 @@ export const FootageShot: React.FC<{
         </Sequence>
         <Sequence from={rampFrame} layout="none">
           <Video
-            src={staticFile(s.src)}
+            src={staticFile(slowSrc)}
             trimBefore={Math.round((s.trimStartSec + s.rampAtSec) * fps)}
             playbackRate={s.slowRate}
             objectFit="cover"

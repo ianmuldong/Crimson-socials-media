@@ -51,7 +51,8 @@ ensureDir(PROCESSED_DIR);
 const manifest = existsSync(MANIFEST)
   ? JSON.parse(readFileSync(MANIFEST, "utf8"))
   : { clips: [] };
-const byName = new Map(manifest.clips.map((c) => [c.source, c]));
+// one entry per source file AND frame rate (30 and 60 FPS versions can coexist)
+const byName = new Map(manifest.clips.map((c) => [`${c.source}@${c.fps}`, c]));
 
 const files = readdirSync(RAW_DIR)
   .filter(
@@ -78,14 +79,12 @@ for (const file of files) {
   const base = path.parse(file).name.replace(/[^a-zA-Z0-9-_]+/g, "-");
   const outName = `${base}-${fps}fps.mp4`;
   const out = path.join(PROCESSED_DIR, outName);
-  const prev = byName.get(file);
-  if (
+  const prev = byName.get(`${file}@${fps}`);
+  const upToDate =
     !args.force &&
-    prev &&
-    prev.fps === fps &&
     existsSync(out) &&
-    statSync(out).mtimeMs > statSync(src).mtimeMs
-  ) {
+    statSync(out).mtimeMs > statSync(src).mtimeMs;
+  if (upToDate && prev) {
     console.log(`• ${file} already processed → ${rel(out)}`);
     continue;
   }
@@ -160,7 +159,8 @@ for (const file of files) {
     "+faststart",
     out,
   ];
-  run("ffmpeg", ffArgs);
+  if (upToDate) console.log("  (re-using existing processed file)");
+  else run("ffmpeg", ffArgs);
 
   const outInfo = ffprobe(out);
   const entry = {
@@ -180,7 +180,7 @@ for (const file of files) {
     caption: prev?.caption ?? "",
     processedAt: new Date().toISOString(),
   };
-  byName.set(file, entry);
+  byName.set(`${file}@${fps}`, entry);
   console.log(`  ✓ ${rel(out)} (${entry.durationSec}s)`);
 }
 
