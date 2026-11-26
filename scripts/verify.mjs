@@ -5,6 +5,7 @@ import { existsSync, statSync } from "node:fs";
 import { ffprobe, parseArgs, parseRate } from "./lib.mjs";
 
 const args = parseArgs(process.argv.slice(2));
+const preview = Boolean(args.preview); // 540×960 previews
 if (args._.length === 0) {
   console.error("Usage: npm run verify -- <file.mp4> [...]");
   process.exit(2);
@@ -25,7 +26,9 @@ for (const file of args._) {
   const checks = [
     ["video stream present", Boolean(v)],
     ["H.264 codec", v?.codec_name === "h264"],
-    ["1080×1920 vertical", v?.width === 1080 && v?.height === 1920],
+    preview
+      ? ["540×960 preview", v?.width === 540 && v?.height === 960]
+      : ["1080×1920 vertical", v?.width === 1080 && v?.height === 1920],
     ["30 or 60 FPS", Math.abs(fps - 30) < 0.01 || Math.abs(fps - 60) < 0.01],
     ["yuv420p (phone compatible)", v?.pix_fmt === "yuv420p"],
     ["duration > 0", duration > 0],

@@ -1,6 +1,15 @@
 import "./brand/fonts";
 import React from "react";
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
+import { FullExplainer, EXPLAINER_FRAMES } from "./campaign/videos/FullExplainer";
+import { MainPromo, MAIN_PROMO_FRAMES } from "./campaign/videos/MainPromo";
+import { LogoArrangementPreview, VenueLayoutPreview } from "./campaign/videos/Previews";
+import { guideFrames, RotationGuide } from "./campaign/videos/RotationGuide";
+import { SummerTeaser, TEASER_FRAMES } from "./campaign/videos/SummerTeaser";
+import { RotationScene } from "./campaign/scenes/RotationScene";
+import { ServeScene, serveSceneSeconds } from "./campaign/scenes/ServeScene";
+import { SessionTimeline } from "./campaign/components/SessionTimeline";
+import { Thumbnail } from "./campaign/videos/Thumbnails";
 import { CrimsonBrandTest } from "./compositions/BrandTest/CrimsonBrandTest";
 import {
   PromoReel,
@@ -24,6 +33,26 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* Friday Night Volleyball Socials — summer campaign (30 FPS, 1080×1920) */}
+      <Folder name="FridaySocials">
+        <Composition id="friday-socials-main-promo" component={MainPromo} durationInFrames={MAIN_PROMO_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="friday-socials-full-explainer" component={FullExplainer} durationInFrames={EXPLAINER_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="friday-socials-rotation-guide" component={RotationGuide} durationInFrames={guideFrames(30)} fps={30} width={1080} height={1920} />
+        <Composition id="friday-socials-summer-teaser" component={SummerTeaser} durationInFrames={TEASER_FRAMES} fps={30} width={1080} height={1920} />
+        <Folder name="Thumbnails">
+          <Still id="thumbnail-1" component={Thumbnail} width={1080} height={1920} defaultProps={{ variant: 1 as const }} />
+          <Still id="thumbnail-2" component={Thumbnail} width={1080} height={1920} defaultProps={{ variant: 2 as const }} />
+          <Still id="thumbnail-3" component={Thumbnail} width={1080} height={1920} defaultProps={{ variant: 3 as const }} />
+        </Folder>
+        <Folder name="Approval">
+          <Still id="approval-venue-layout" component={VenueLayoutPreview} width={1080} height={1920} />
+          <Composition id="approval-logo-arrangement" component={LogoArrangementPreview} durationInFrames={105} fps={30} width={1080} height={1920} defaultProps={{ guides: true }} />
+          <Composition id="approval-rotation-demo" component={RotationScene} durationInFrames={450} fps={30} width={1080} height={1920} defaultProps={{ options: { zoomToCourt: true, rotations: 2, activeCourts: [0] } }} />
+          <Composition id="approval-serving-rules" component={ServeScene} durationInFrames={Math.round(serveSceneSeconds() * 30)} fps={30} width={1080} height={1920} />
+          <Composition id="approval-session-timeline" component={SessionTimeline} durationInFrames={240} fps={30} width={1080} height={1920} defaultProps={{ durationSec: 8 }} />
+        </Folder>
+      </Folder>
+
       <Folder name="Test">
         <Composition
           id="CrimsonTest-30fps"

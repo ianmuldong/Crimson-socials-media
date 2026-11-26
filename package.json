@@ -13,6 +13,7 @@
     "@remotion/fonts": "4.0.547",
     "@remotion/google-fonts": "4.0.547",
     "@remotion/media": "4.0.547",
+    "@remotion/motion-blur": "4.0.547",
     "@remotion/paths": "4.0.547",
     "@remotion/renderer": "4.0.547",
     "@remotion/shapes": "4.0.547",
@@ -44,7 +45,10 @@
     "compositions": "remotion compositions",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "campaign:analyse": "node scripts/campaign-analyse.mjs",
+    "campaign:preview": "node scripts/campaign-preview.mjs",
+    "campaign:render": "node scripts/campaign-render.mjs"
   },
   "allowScripts": {
     "esbuild": false

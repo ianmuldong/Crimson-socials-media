@@ -1,0 +1,93 @@
+{
+  "_readme": "Which clip plays in each shot. src is relative to public/ (null = labelled placeholder). Auto-filled by `npm run campaign:plan`; edit by hand any time.",
+  "shots": {
+    "hook": {
+      "label": "HOOK · STRONGEST SPIKE OR BLOCK",
+      "src": null,
+      "trimStartSec": 0,
+      "rampAtSec": 0.9,
+      "slowRate": 0.5
+    },
+    "reveal1": { "label": "SERVE OR ATTACK", "src": null, "trimStartSec": 0 },
+    "reveal2": { "label": "LONG RALLY", "src": null, "trimStartSec": 0 },
+    "wide1": {
+      "label": "WIDE · MULTIPLE COURTS",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "wide2": {
+      "label": "ATMOSPHERE · PLAYERS ENJOYING",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "stat1": {
+      "label": "WIDE · ALL SIX COURTS",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "stat2": {
+      "label": "CROWDED HALL / MANY PLAYERS",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "stat3": { "label": "ACTION · DIG OR SET", "src": null, "trimStartSec": 0 },
+    "stat4": {
+      "label": "COMMUNITY · GROUP / HIGH FIVES",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "community1": {
+      "label": "EXCITING RALLY",
+      "src": null,
+      "trimStartSec": 0,
+      "rampAtSec": 0.6,
+      "slowRate": 0.6
+    },
+    "community2": { "label": "CELEBRATION", "src": null, "trimStartSec": 0 },
+    "community3": {
+      "label": "FRIENDS · LAUGHING / CHATTING",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "community4": {
+      "label": "BIG POINT REACTION",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "closing": {
+      "label": "WIDE · END OF NIGHT ATMOSPHERE",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "finale1": { "label": "RALLY BUILD-UP", "src": null, "trimStartSec": 0 },
+    "finale2": {
+      "label": "SPIKE · SLOW MOTION",
+      "src": null,
+      "trimStartSec": 0,
+      "rampAtSec": 0.4,
+      "slowRate": 0.5
+    },
+    "finale3": { "label": "CELEBRATION", "src": null, "trimStartSec": 0 },
+    "teaser1": {
+      "label": "TEASER · STRONGEST HIGHLIGHT",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "teaser2": {
+      "label": "TEASER · WIDE COURTS",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "teaser3": {
+      "label": "TEASER · CROWD / PLAYERS",
+      "src": null,
+      "trimStartSec": 0
+    },
+    "teaser4": { "label": "TEASER · RALLY", "src": null, "trimStartSec": 0 },
+    "teaser5": {
+      "label": "TEASER · CELEBRATION",
+      "src": null,
+      "trimStartSec": 0
+    }
+  }
+}
