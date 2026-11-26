@@ -15,7 +15,7 @@ const videos = {
   main: "friday-socials-main-promo",
   explainer: "friday-socials-full-explainer",
   guide: "friday-socials-rotation-guide",
-  teaser: "friday-socials-summer-teaser",
+  teaser: "friday-night-socials-teaser",
 };
 const pickList = args._.length ? args._ : Object.keys(videos);
 const rx = (cmd) => {

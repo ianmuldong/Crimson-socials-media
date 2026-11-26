@@ -93,8 +93,8 @@ export const FullExplainer: React.FC = () => (
     <Sequence from={225} durationInFrames={75} name="Montage text 3">
       <TextArea top={760}>
         <KineticHeadline
-          lines={["ONE VOLLEYBALL", "COMMUNITY."]}
-          size={150}
+          lines={["EVERY FRIDAY", "NIGHT."]}
+          size={190}
           align="left"
           accentIndex={1}
         />
@@ -208,16 +208,20 @@ export const FullExplainer: React.FC = () => (
         />
       </TextArea>
     </Sequence>
-    <Sequence from={T.outro + 180} durationInFrames={90} name="Outro text 3">
+    <Sequence
+      from={T.outro + 180}
+      durationInFrames={90}
+      name="Good volleyball great company"
+    >
       <TextArea top={760}>
         <KineticHeadline
-          lines={["YOUR FRIDAY", "NIGHTS."]}
-          size={170}
+          lines={["GOOD", "VOLLEYBALL."]}
+          size={190}
           align="left"
         />
         <KineticHeadline
-          lines={["REDEFINED."]}
-          size={170}
+          lines={["GREAT COMPANY."]}
+          size={190}
           align="left"
           startSec={0.55}
           accentIndex={0}
@@ -225,11 +229,15 @@ export const FullExplainer: React.FC = () => (
         />
       </TextArea>
     </Sequence>
-    <Sequence from={T.outro + 270} durationInFrames={90} name="Outro text 4">
+    <Sequence
+      from={T.outro + 270}
+      durationInFrames={90}
+      name="See you on the court"
+    >
       <TextArea top={780}>
         <KineticHeadline
-          lines={["RUNNING", "ALL SUMMER LONG."]}
-          size={150}
+          lines={["SEE YOU ON", "THE COURT."]}
+          size={200}
           align="left"
         />
       </TextArea>
@@ -237,7 +245,7 @@ export const FullExplainer: React.FC = () => (
 
     {/* 8 — closing */}
     <Sequence from={T.closing} durationInFrames={210} name="Closing card">
-      <ClosingCard venueLines="short" />
+      <ClosingCard venueLines="full" />
     </Sequence>
 
     <Finish />

@@ -5,7 +5,7 @@ import { FullExplainer, EXPLAINER_FRAMES } from "./campaign/videos/FullExplainer
 import { MainPromo, MAIN_PROMO_FRAMES } from "./campaign/videos/MainPromo";
 import { LogoArrangementPreview, VenueLayoutPreview } from "./campaign/videos/Previews";
 import { guideFrames, RotationGuide } from "./campaign/videos/RotationGuide";
-import { SummerTeaser, TEASER_FRAMES } from "./campaign/videos/SummerTeaser";
+import { FridayNightTeaser, TEASER_FRAMES } from "./campaign/videos/FridayNightTeaser";
 import { RotationScene } from "./campaign/scenes/RotationScene";
 import { ServeScene, serveSceneSeconds } from "./campaign/scenes/ServeScene";
 import { SessionTimeline } from "./campaign/components/SessionTimeline";
@@ -33,12 +33,12 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* Friday Night Volleyball Socials — summer campaign (30 FPS, 1080×1920) */}
+      {/* Friday Night Volleyball Socials — evergreen campaign (30 FPS, 1080×1920) */}
       <Folder name="FridaySocials">
         <Composition id="friday-socials-main-promo" component={MainPromo} durationInFrames={MAIN_PROMO_FRAMES} fps={30} width={1080} height={1920} />
         <Composition id="friday-socials-full-explainer" component={FullExplainer} durationInFrames={EXPLAINER_FRAMES} fps={30} width={1080} height={1920} />
         <Composition id="friday-socials-rotation-guide" component={RotationGuide} durationInFrames={guideFrames(30)} fps={30} width={1080} height={1920} />
-        <Composition id="friday-socials-summer-teaser" component={SummerTeaser} durationInFrames={TEASER_FRAMES} fps={30} width={1080} height={1920} />
+        <Composition id="friday-night-socials-teaser" component={FridayNightTeaser} durationInFrames={TEASER_FRAMES} fps={30} width={1080} height={1920} />
         <Folder name="Thumbnails">
           <Still id="thumbnail-1" component={Thumbnail} width={1080} height={1920} defaultProps={{ variant: 1 as const }} />
           <Still id="thumbnail-2" component={Thumbnail} width={1080} height={1920} defaultProps={{ variant: 2 as const }} />

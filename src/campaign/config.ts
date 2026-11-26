@@ -28,15 +28,15 @@ export const campaign = {
     name: "FRIDAY NIGHT VOLLEYBALL SOCIALS",
     nameLines: ["FRIDAY NIGHT", "VOLLEYBALL SOCIALS"],
     kind: "INDOOR VOLLEYBALL SOCIALS",
-    day: "EVERY FRIDAY",
-    season: "RUNNING ALL SUMMER LONG.",
+    /** Evergreen: the socials are established and running. No season, start date or "coming soon". */
+    day: "EVERY FRIDAY NIGHT",
+    signOff: "SEE YOU ON THE COURT.",
+    welcome: "ALL SKILL LEVELS WELCOME.",
     venue: "ECU SPORT & FITNESS",
     suburb: "MOUNT LAWLEY",
     venueShort: "ECU MOUNT LAWLEY",
     city: "PERTH",
     timeRange: "7:30 PM – 10:00 PM",
-    /** Specific season dates, e.g. "6 DEC – 28 FEB". null = not shown. */
-    dates: null as string | null,
     courts: 6,
     mainCourts: 2,
     maxPlayers: 84,
@@ -124,7 +124,7 @@ export const campaign = {
 
   /** Beat grid used to time cuts. Set to your licensed track's BPM. */
   music: {
-    src: null as string | null, // e.g. "audio/music/summer-track.mp3"
+    src: null as string | null, // e.g. "audio/music/friday-track.mp3"
     bpm: 120,
     volume: 0.85,
     /** Volume of the footage's own sound (crowd, squeaks, ball hits). */
@@ -135,16 +135,17 @@ export const campaign = {
   },
 
   text: {
+    // Hook + reveal read as one line: "(ONE OF) PERTH'S BIGGEST · FRIDAY NIGHT INDOOR VOLLEYBALL SOCIALS"
     hook: ["ONE OF", "PERTH'S", "BIGGEST"],
     hookConfirmed: ["PERTH'S", "BIGGEST"],
-    community: ["MORE THAN JUST VOLLEYBALL.", "YOUR FRIDAY NIGHTS. REDEFINED."],
+    community: ["GOOD VOLLEYBALL.", "GREAT COMPANY."],
     stats: [
       "6 COURTS.",
       "UP TO 84 PLAYERS.",
-      "EVERY FRIDAY.",
-      "ONE VOLLEYBALL COMMUNITY.",
+      "ALL SKILL LEVELS WELCOME.",
+      "15-MINUTE GAMES.",
     ],
-    proudlyRunBy: "PROUDLY RUN BY",
+    proudlyRunBy: "PROUDLY HOSTED BY",
     orgLine: "CHEQUERS × CRIMSON × DO VOLLEYBALL",
     newHere: ["NEW TO FRIDAY SOCIALS?", "HERE'S HOW IT WORKS."],
     newHereRotate: ["NEW TO FRIDAY SOCIALS?", "HERE'S HOW TO ROTATE."],
@@ -156,14 +157,14 @@ export const campaign = {
     explainerOutro: [
       "NOW YOU KNOW HOW IT WORKS.",
       "IT'S YOUR TURN.",
-      "YOUR FRIDAY NIGHTS.",
-      "REDEFINED.",
+      "GOOD VOLLEYBALL. GREAT COMPANY.",
+      "SEE YOU ON THE COURT.",
     ],
     teaser: [
       "PERTH'S FRIDAY NIGHTS.",
       "SIX COURTS.",
       "UP TO 84 PLAYERS.",
-      "ALL SUMMER LONG.",
+      "ALL SKILL LEVELS WELCOME.",
     ],
   },
 

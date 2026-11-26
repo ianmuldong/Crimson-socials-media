@@ -1,4 +1,7 @@
-# Friday Night Volleyball Socials: Summer Campaign
+# Friday Night Volleyball Socials: Evergreen Campaign
+
+The socials are established and running **every Friday night**. All campaign wording is evergreen, so the videos
+can be reused for as long as the socials run. There's no season, no start date, and no "coming soon" / "starting soon" wording.
 
 The campaign is jointly run by **Chequers Volleyball Club**, **Crimson Volleyball Club** and **DO Volleyball**, as equal partners.
 This repository is called "Crimson Media", but all public-facing material represents the collaborative event.
@@ -12,9 +15,17 @@ All four are 1080×1920 (9:16), 30 FPS, H.264 + AAC.
 | `friday-socials-main-promo.mp4` | 30 s | `friday-socials-main-promo` |
 | `friday-socials-full-explainer.mp4` | ~76 s | `friday-socials-full-explainer` |
 | `friday-socials-rotation-guide.mp4` | ~24 s | `friday-socials-rotation-guide` |
-| `friday-socials-summer-teaser.mp4` | 13 s | `friday-socials-summer-teaser` |
+| `friday-night-socials-teaser.mp4` | 13 s | `friday-night-socials-teaser` |
 
 Final files go to `exports/final/`. 540×960 previews and storyboards go to `exports/previews/`.
+
+## On-screen copy (approved direction)
+
+PERTH'S BIGGEST* FRIDAY NIGHT INDOOR VOLLEYBALL SOCIALS · EVERY FRIDAY NIGHT · 6 COURTS · UP TO 84 PLAYERS ·
+ALL SKILL LEVELS WELCOME · 15-MINUTE GAMES · GOOD VOLLEYBALL. GREAT COMPANY. · 7:30 PM – 10:00 PM ·
+ECU SPORT & FITNESS, MOUNT LAWLEY · SEE YOU ON THE COURT. · PROUDLY HOSTED BY CHEQUERS × CRIMSON × DO VOLLEYBALL
+
+\* Shown as "ONE OF PERTH'S BIGGEST" until `event.biggestClaimConfirmed` is set to `true` after verification.
 
 ## Workflow
 
@@ -32,7 +43,7 @@ Preview live with `npm run dev`, then open **FridaySocials** in the sidebar.
 
 | What | File |
 | --- | --- |
-| Event name, day, venue, times, dates, courts, capacity, booking link/CTA, the "PERTH'S BIGGEST" switch | `src/campaign/config.ts` → `event` |
+| Event name, day ("EVERY FRIDAY NIGHT"), venue, times, sign-off, courts, capacity, booking link/CTA, the "PERTH'S BIGGEST" switch | `src/campaign/config.ts` → `event` |
 | Organisation names, logo files, handles | `src/campaign/config.ts` → `orgs` |
 | Session timeline (warm-up, first game, game length, break, finish, total games) | `src/campaign/config.ts` → `session` |
 | Brand colours | `src/campaign/config.ts` → `colors` |
@@ -123,4 +134,4 @@ See `exports/previews/` for the approval stills, then answer these:
 3. Is the clockwise order T1 → T2 → T3 → B3 → B2 → B1 (crossing the nets at the ends)?
 4. Serving: after a missed second serve, is the free ball fed to the opposition **and** service passes to them, or are these two separate situations?
 5. Can "PERTH'S BIGGEST" be substantiated? (Until then: "ONE OF PERTH'S BIGGEST".)
-6. Total number of games per night, the booking link, and the season dates.
+6. Total number of games per night and the booking link.

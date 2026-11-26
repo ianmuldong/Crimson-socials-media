@@ -35,7 +35,7 @@ export const Backdrop: React.FC<{ intensity?: number }> = ({
   );
 };
 
-/** Event details block: day, venue, time, season, CTA. */
+/** Event details block: day, venue, time, welcome line, sign-off, CTA. */
 export const EventInfoCard: React.FC<{ short?: boolean }> = ({
   short = false,
 }) => {
@@ -79,8 +79,8 @@ export const EventInfoCard: React.FC<{ short?: boolean }> = ({
             size={46}
             color={C.accent2}
           />
-          {e.dates ? <Kicker text={e.dates} startSec={0.95} size={40} /> : null}
-          <Kicker text={e.season} startSec={1.05} size={40} color={C.bone} />
+          <Kicker text={e.welcome} startSec={0.95} size={40} color={C.bone} />
+          <Kicker text={e.signOff} startSec={1.05} size={40} color={C.white} />
         </div>
         <div
           style={{
@@ -113,7 +113,7 @@ export const EventInfoCard: React.FC<{ short?: boolean }> = ({
 };
 
 /**
- * Collaborative end card: event name, PROUDLY RUN BY, three equal logos,
+ * Collaborative end card: event name, PROUDLY HOSTED BY, three equal logos,
  * the three-way name line and the booking CTA.
  */
 export const OrganiserEndCard: React.FC<{
@@ -160,11 +160,22 @@ export const OrganiserEndCard: React.FC<{
               translate: `0px ${(1 - ctaP) * 30}px`,
             }}
           >
-            <div style={{ background: C.white, padding: "16px 40px" }}>
+            <div
+              style={{
+                fontFamily: F.display,
+                fontSize: 72,
+                color: C.white,
+                lineHeight: 1,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {campaign.event.signOff}
+            </div>
+            <div style={{ background: C.white, padding: "14px 36px" }}>
               <div
                 style={{
                   fontFamily: F.display,
-                  fontSize: 70,
+                  fontSize: 56,
                   color: C.black,
                   lineHeight: 1,
                 }}
@@ -188,12 +199,25 @@ export const OrganiserEndCard: React.FC<{
               style={{
                 fontFamily: F.body,
                 fontWeight: 700,
-                fontSize: 30,
+                fontSize: 28,
                 color: C.mute,
-                letterSpacing: "0.16em",
+                letterSpacing: "0.12em",
+                whiteSpace: "nowrap",
               }}
             >
-              {campaign.event.day} · {campaign.event.venueShort}
+              {campaign.event.day} · {campaign.event.timeRange}
+            </div>
+            <div
+              style={{
+                fontFamily: F.body,
+                fontWeight: 700,
+                fontSize: 28,
+                color: C.mute,
+                letterSpacing: "0.12em",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {campaign.event.venue}, {campaign.event.suburb}
             </div>
           </div>
         ) : null}
@@ -234,31 +258,42 @@ export const ClosingCard: React.FC<{ venueLines?: "full" | "short" }> = ({
           staggerSec={0.08}
         />
         <div style={{ height: 22 }} />
-        <Kicker text={e.day} startSec={0.3} size={46} color={C.white} />
-        <div style={{ height: 10 }} />
-        {venueLines === "full" ? (
-          <>
-            <Kicker text={e.venue} startSec={0.42} size={40} />
-            <Kicker text={e.suburb} startSec={0.5} size={40} />
-          </>
-        ) : (
-          <Kicker text={e.venueShort} startSec={0.42} size={40} />
-        )}
+        <Kicker text={e.day + "."} startSec={0.3} size={48} color={C.white} />
         <div style={{ height: 10 }} />
         <Kicker
-          text={e.timeRange}
-          startSec={0.62}
+          text={e.timeRange + "."}
+          startSec={0.42}
           size={44}
           color={C.accent2}
         />
-        {e.dates ? <Kicker text={e.dates} startSec={0.7} size={36} /> : null}
-        <div style={{ height: 8 }} />
-        <Kicker text={e.season} startSec={0.8} size={36} color={C.bone} />
+        <div style={{ height: 10 }} />
+        {venueLines === "full" ? (
+          <>
+            <Kicker text={e.venue + ","} startSec={0.52} size={40} />
+            <Kicker text={e.suburb + "."} startSec={0.6} size={40} />
+          </>
+        ) : (
+          <Kicker text={e.venueShort + "."} startSec={0.52} size={40} />
+        )}
+        <div style={{ height: 26 }} />
         <div
           style={{
-            marginTop: 34,
+            fontFamily: F.display,
+            fontSize: 72,
+            color: C.white,
+            lineHeight: 1,
+            opacity: cta,
+            translate: `0px ${(1 - cta) * 20}px`,
+            whiteSpace: "nowrap",
+          }}
+        >
+          {e.signOff}
+        </div>
+        <div
+          style={{
+            marginTop: 20,
             background: C.white,
-            padding: "14px 40px",
+            padding: "12px 34px",
             opacity: cta,
             scale: 0.9 + 0.1 * cta,
           }}
@@ -266,7 +301,7 @@ export const ClosingCard: React.FC<{ venueLines?: "full" | "short" }> = ({
           <div
             style={{
               fontFamily: F.display,
-              fontSize: 64,
+              fontSize: 50,
               color: C.black,
               lineHeight: 1,
             }}
@@ -279,7 +314,7 @@ export const ClosingCard: React.FC<{ venueLines?: "full" | "short" }> = ({
             <Kicker text={e.bookingUrl} startSec={1.3} size={30} />
           </div>
         ) : null}
-        <div style={{ height: 56 }} />
+        <div style={{ height: 46 }} />
         <OrganiserCredit startSec={1.4} size={250} gap={30} />
       </AbsoluteFill>
     </AbsoluteFill>

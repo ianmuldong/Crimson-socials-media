@@ -58,25 +58,25 @@ export const MainPromo: React.FC = () => {
         </TextArea>
       </Sequence>
 
-      {/* 6–10 s SUMMER */}
+      {/* 6–10 s EVERY FRIDAY NIGHT (evergreen — no season or dates) */}
       <Sequence from={180} durationInFrames={60} name="Wide 1">
         <FootageShot shot="wide1" />
       </Sequence>
       <Sequence from={240} durationInFrames={60} name="Wide 2">
         <FootageShot shot="wide2" />
       </Sequence>
-      <Sequence from={180} durationInFrames={120} name="Summer text">
+      <Sequence from={180} durationInFrames={120} name="Every Friday night">
         <TextArea top={720}>
           <KineticHeadline
-            lines={["RUNNING"]}
+            lines={["EVERY"]}
             styles={[{ size: 120, font: "display", color: C.accent2 }]}
             align="left"
           />
           <KineticHeadline
-            lines={["ALL SUMMER", "LONG."]}
-            size={210}
+            lines={["FRIDAY", "NIGHT."]}
+            size={250}
             align="left"
-            startSec={0.5}
+            startSec={0.4}
             staggerSec={0.12}
             exitSec={3.65}
           />
@@ -118,31 +118,25 @@ export const MainPromo: React.FC = () => {
           </Sequence>
         ),
       )}
-      <Sequence from={540} durationInFrames={90} name="More than volleyball">
+      <Sequence from={540} durationInFrames={90} name="Good volleyball">
         <TextArea top={760}>
           <KineticHeadline
-            lines={["MORE THAN", "JUST VOLLEYBALL."]}
-            size={150}
+            lines={["GOOD", "VOLLEYBALL."]}
+            size={200}
             align="left"
             staggerSec={0.12}
             exitSec={2.65}
           />
         </TextArea>
       </Sequence>
-      <Sequence from={630} durationInFrames={90} name="Redefined">
+      <Sequence from={630} durationInFrames={90} name="Great company">
         <TextArea top={760}>
           <KineticHeadline
-            lines={["YOUR FRIDAY", "NIGHTS."]}
-            size={170}
+            lines={["GREAT", "COMPANY."]}
+            size={220}
             align="left"
-            staggerSec={0.1}
-          />
-          <KineticHeadline
-            lines={["REDEFINED."]}
-            size={170}
-            align="left"
-            startSec={0.6}
-            accentIndex={0}
+            staggerSec={0.12}
+            accentIndex={1}
             exitSec={2.65}
           />
         </TextArea>

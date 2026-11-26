@@ -283,7 +283,7 @@ export const LogoLockup: React.FC<{
 };
 
 /**
- * Closing credit: "PROUDLY RUN BY / CHEQUERS × CRIMSON × DO VOLLEYBALL"
+ * Closing credit: "PROUDLY HOSTED BY / CHEQUERS × CRIMSON × DO VOLLEYBALL"
  * read as one statement, directly above the three equal logo panels.
  */
 export const OrganiserCredit: React.FC<{

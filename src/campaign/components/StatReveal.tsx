@@ -1,6 +1,7 @@
 import React from "react";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, ease, F } from "../theme";
+import { fitSize } from "./Kinetic";
 
 /**
  * Animated statistic. If the text contains a number it counts up
@@ -85,7 +86,9 @@ export const StatReveal: React.FC<{
           }}
         >
           {m[1].trim() ? (
-            <div style={{ fontSize: 110 }}>{m[1].trim()}</div>
+            <div style={{ fontSize: fitSize(m[1].trim(), 110, 830) }}>
+              {m[1].trim()}
+            </div>
           ) : null}
           <div
             style={{
@@ -97,7 +100,14 @@ export const StatReveal: React.FC<{
           >
             {Math.round(Number(m[2]) * count)}
           </div>
-          <div style={{ fontSize: 130 }}>{m[3].trim()}</div>
+          <div
+            style={{
+              fontSize: fitSize(m[3].trim().replace(/^-/, ""), 130, 830),
+              whiteSpace: "nowrap",
+            }}
+          >
+            {m[3].trim().replace(/^-/, "")}
+          </div>
         </div>
       ) : (
         <div

@@ -8,7 +8,7 @@ import { Kicker, KineticHeadline } from "../components/Kinetic";
 import { MusicBed, Sfx } from "../components/Sfx";
 import { C } from "../theme";
 
-/** D. SUMMER TEASER — 13 s @ 30 fps (390 frames). Fast 1.5 s cuts on the beat. */
+/** D. FRIDAY NIGHT SOCIALS TEASER — 13 s @ 30 fps (390 frames). Evergreen; fast 1.5 s cuts on the beat. */
 export const TEASER_FRAMES = 390;
 
 const beats: {
@@ -37,8 +37,8 @@ const beats: {
     from: 135,
     dur: 45,
     shot: "teaser4",
-    lines: ["ALL SUMMER", "LONG."],
-    size: 200,
+    lines: ["ALL SKILL", "LEVELS", "WELCOME."],
+    size: 170,
   },
   {
     from: 180,
@@ -49,7 +49,7 @@ const beats: {
   },
 ];
 
-export const SummerTeaser: React.FC = () => (
+export const FridayNightTeaser: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: C.black }}>
     {beats.map((b, i) => (
       <Sequence

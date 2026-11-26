@@ -4,6 +4,7 @@ import { campaign } from "../config";
 import { FootageShot, ShotKey } from "../components/FootageShot";
 import { LogoLockup } from "../components/Logos";
 import { C, F } from "../theme";
+import { fitSize } from "../components/Kinetic";
 
 /** Reel cover / thumbnail options. Text sits in the centre 1080×1350 so the 4:5 grid crop keeps it. */
 export const Thumbnail: React.FC<{ variant: 1 | 2 | 3 }> = ({ variant }) => {
@@ -13,8 +14,8 @@ export const Thumbnail: React.FC<{ variant: 1 | 2 | 3 }> = ({ variant }) => {
     variant === 1
       ? ["FRIDAY", "NIGHT", "VOLLEYBALL"]
       : variant === 2
-        ? ["6 COURTS.", "84 PLAYERS.", "EVERY FRIDAY."]
-        : ["YOUR FRIDAY", "NIGHTS.", "REDEFINED."];
+        ? ["6 COURTS.", "84 PLAYERS.", "EVERY FRIDAY", "NIGHT."]
+        : ["GOOD", "VOLLEYBALL.", "GREAT", "COMPANY."];
   return (
     <AbsoluteFill style={{ backgroundColor: C.black }}>
       <FootageShot shot={shot} push={0} withSound={false} />
@@ -37,14 +38,14 @@ export const Thumbnail: React.FC<{ variant: 1 | 2 | 3 }> = ({ variant }) => {
             marginBottom: 16,
           }}
         >
-          {variant === 1 ? "SOCIALS · ALL SUMMER" : campaign.event.venueShort}
+          {variant === 1 ? campaign.event.day : campaign.event.venueShort}
         </div>
         {lines.map((l, i) => (
           <div
             key={i}
             style={{
               fontFamily: F.display,
-              fontSize: variant === 1 ? 210 : 170,
+              fontSize: fitSize(l, variant === 1 ? 210 : 170, 900),
               lineHeight: 0.98,
               color:
                 i === lines.length - 1 && variant !== 1 ? C.accent : C.white,

@@ -21,7 +21,7 @@ const videos = {
   main: { id: "friday-socials-main-promo", min: 25, max: 30.5 },
   explainer: { id: "friday-socials-full-explainer", min: 60, max: 90.5 },
   guide: { id: "friday-socials-rotation-guide", min: 20, max: 30.5 },
-  teaser: { id: "friday-socials-summer-teaser", min: 10, max: 15.5 },
+  teaser: { id: "friday-night-socials-teaser", min: 10, max: 15.5 },
 };
 
 // ── pre-flight: never silently ship placeholders ──
