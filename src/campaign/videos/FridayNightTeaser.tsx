@@ -5,7 +5,7 @@ import { OrganiserEndCard } from "../components/EndCards";
 import { FootageShot } from "../components/FootageShot";
 import { EdgeFades, Finish, Flash, TextArea } from "../components/Finish";
 import { Kicker, KineticHeadline } from "../components/Kinetic";
-import { MusicBed, Sfx } from "../components/Sfx";
+import { MusicBed, Sfx, Voiceover } from "../components/Sfx";
 import { C } from "../theme";
 
 /** D. FRIDAY NIGHT SOCIALS TEASER — 13 s @ 30 fps (390 frames). Evergreen; fast 1.5 s cuts on the beat. */
@@ -96,6 +96,7 @@ export const FridayNightTeaser: React.FC = () => (
     ))}
     <Flash at={285} strength={0.5} />
     <EdgeFades />
+    <Voiceover id="friday-night-socials-teaser" />
     <MusicBed total={TEASER_FRAMES} />
     {beats.map((b) => (
       <Sfx key={b.from} name="bass-hit" at={b.from + 2} volume={0.7} />

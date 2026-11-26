@@ -1,0 +1,151 @@
+{
+  "_readme": "Synthetic narration (Kokoro-82M, Apache 2.0, runs offline). Each line starts at `at` seconds in its video. Lines must not overlap and must finish before the video ends; the generator checks this. Text is what is spoken; it mirrors on-screen copy.",
+  "voice": "af_heart",
+  "speed": 0.95,
+  "videos": {
+    "friday-socials-main-promo": {
+      "lines": [
+        {
+          "at": 0.3,
+          "text": "Perth's Friday Night Volleyball Socials."
+        },
+        {
+          "at": 3.6,
+          "text": "Every Friday night."
+        },
+        {
+          "at": 10.2,
+          "text": "Six courts. Up to eighty-four players."
+        },
+        {
+          "at": 14.4,
+          "text": "All skill levels welcome."
+        },
+        {
+          "at": 18.6,
+          "text": "Good volleyball. Great company."
+        },
+        {
+          "at": 24.3,
+          "text": "Seven thirty to ten p.m. at ECU."
+        },
+        {
+          "at": 28.2,
+          "text": "See you on the court."
+        }
+      ]
+    },
+    "friday-night-socials-teaser": {
+      "lines": [
+        {
+          "at": 0.2,
+          "text": "Perth's Friday nights."
+        },
+        {
+          "at": 1.7,
+          "text": "Six courts."
+        },
+        {
+          "at": 3.2,
+          "text": "Up to eighty-four players."
+        },
+        {
+          "at": 5.0,
+          "text": "All skill levels welcome."
+        },
+        {
+          "at": 6.9,
+          "text": "Friday Night Volleyball Socials."
+        },
+        {
+          "at": 9.2,
+          "text": "Every Friday night."
+        },
+        {
+          "at": 10.9,
+          "text": "See you on the court."
+        }
+      ]
+    },
+    "friday-socials-rotation-guide": {
+      "lines": [
+        {
+          "at": 0.2,
+          "text": "New to Friday Socials? Here's how to rotate."
+        },
+        {
+          "at": 4.6,
+          "text": "One team on each court stays put."
+        },
+        {
+          "at": 7.9,
+          "text": "Everyone else rotates clockwise."
+        },
+        {
+          "at": 11.0,
+          "text": "New game, new opponents."
+        },
+        {
+          "at": 19.9,
+          "text": "Every Friday night. See you on the court."
+        }
+      ]
+    },
+    "friday-socials-full-explainer": {
+      "lines": [
+        {
+          "at": 0.3,
+          "text": "Perth's Friday Night Volleyball Socials."
+        },
+        {
+          "at": 7.7,
+          "text": "Every Friday night."
+        },
+        {
+          "at": 15.3,
+          "text": "New to Friday Socials? Here's how the night works."
+        },
+        {
+          "at": 19.4,
+          "text": "Warm-up at seven thirty. First game at seven forty-five. Fifteen-minute games, with a ten-minute break after game four."
+        },
+        {
+          "at": 27.4,
+          "text": "Two main courts, six playing areas. One team stays, and everyone else rotates clockwise after every game."
+        },
+        {
+          "at": 42.6,
+          "text": "First serve missed? You get a second attempt."
+        },
+        {
+          "at": 47.0,
+          "text": "Second serve missed? A free ball goes to the opposition."
+        },
+        {
+          "at": 51.4,
+          "text": "Two missed serves? Service passes to the other team."
+        },
+        {
+          "at": 57.4,
+          "text": "Now you know how it works."
+        },
+        {
+          "at": 60.4,
+          "text": "It's your turn."
+        },
+        {
+          "at": 63.4,
+          "text": "Good volleyball. Great company."
+        },
+        {
+          "at": 66.4,
+          "text": "See you on the court."
+        },
+        {
+          "at": 69.6,
+          "text": "Every Friday night. Check our Instagram for booking details."
+        }
+      ]
+    }
+  }
+}

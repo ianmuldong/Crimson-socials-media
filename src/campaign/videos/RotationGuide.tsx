@@ -4,7 +4,7 @@ import { campaign } from "../config";
 import { Backdrop, OrganiserEndCard } from "../components/EndCards";
 import { EdgeFades, Finish, TextArea } from "../components/Finish";
 import { KineticHeadline } from "../components/Kinetic";
-import { MusicBed, Sfx } from "../components/Sfx";
+import { MusicBed, Sfx, Voiceover } from "../components/Sfx";
 import {
   RotationScene,
   rotationSchedule,
@@ -66,6 +66,7 @@ export const RotationGuide: React.FC = () => {
       </Sequence>
       <Finish />
       <EdgeFades />
+      <Voiceover id="friday-socials-rotation-guide" />
       <MusicBed total={guideFrames(30)} />
       <Sfx name="bass-hit" at={10} volume={0.6} />
       <Sfx name="whoosh" at={INTRO - 6} volume={0.6} />

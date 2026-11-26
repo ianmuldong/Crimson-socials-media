@@ -2,6 +2,7 @@ import React from "react";
 import { Audio } from "@remotion/media";
 import { Sequence, staticFile } from "remotion";
 import { campaign } from "../config";
+import { hasAsset } from "./assets";
 
 export type SfxName =
   | "whoosh"
@@ -43,5 +44,19 @@ export const MusicBed: React.FC<{ fadeOutFrames?: number; total: number }> = ({
         campaign.music.volume * Math.min(1, f / 10, (total - f) / fadeOutFrames)
       }
     />
+  );
+};
+
+/**
+ * Synthetic narration for one video (public/audio/voiceover/<id>.wav, made by
+ * `npm run voiceover`). Silently absent until the file exists.
+ */
+export const Voiceover: React.FC<{ id: string; volume?: number }> = ({
+  id,
+  volume = 1,
+}) => {
+  if (!hasAsset(`audio/voiceover/${id}.wav`)) return null;
+  return (
+    <Audio src={staticFile(`audio/voiceover/${id}.wav`)} volume={volume} />
   );
 };

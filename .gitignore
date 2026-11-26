@@ -25,3 +25,10 @@ exports/previews/*.mp4
 exports/previews/storyboards/
 exports/final/
 exports/reels/*.mp4
+
+# Synthetic voice: model files are ~340 MB and downloaded on demand; work files are temporary.
+exports/voice-models/
+exports/voice-work/
+
+# Generated narration tracks (re-create with: npm run voiceover)
+public/audio/voiceover/

@@ -5,7 +5,7 @@ import { ClosingCard } from "../components/EndCards";
 import { FootageShot } from "../components/FootageShot";
 import { EdgeFades, Finish, Flash, TextArea } from "../components/Finish";
 import { Kicker, KineticHeadline } from "../components/Kinetic";
-import { MusicBed, Sfx } from "../components/Sfx";
+import { MusicBed, Sfx, Voiceover } from "../components/Sfx";
 import { StatReveal } from "../components/StatReveal";
 import { C } from "../theme";
 
@@ -155,6 +155,7 @@ export const MainPromo: React.FC = () => {
       <EdgeFades />
 
       {/* sound design */}
+      <Voiceover id="friday-socials-main-promo" />
       <MusicBed total={MAIN_PROMO_FRAMES} />
       <Sfx name="bass-hit" at={4} />
       <Sfx name="whoosh" at={84} />

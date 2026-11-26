@@ -7,7 +7,7 @@ import { EdgeFades, Finish, Flash, TextArea } from "../components/Finish";
 import { KineticHeadline } from "../components/Kinetic";
 import { OrganiserCredit } from "../components/Logos";
 import { SessionTimeline } from "../components/SessionTimeline";
-import { MusicBed, Sfx } from "../components/Sfx";
+import { MusicBed, Sfx, Voiceover } from "../components/Sfx";
 import {
   RotationScene,
   rotationSchedule,
@@ -263,6 +263,7 @@ export const FullExplainer: React.FC = () => (
     ))}
     <EdgeFades />
 
+    <Voiceover id="friday-socials-full-explainer" />
     <MusicBed total={EXPLAINER_FRAMES} />
     <Sfx name="bass-hit" at={8} />
     {[75, 120, 165, 225].map((f) => (

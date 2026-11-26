@@ -48,7 +48,8 @@
     "lint": "eslint src && tsc",
     "campaign:analyse": "node scripts/campaign-analyse.mjs",
     "campaign:preview": "node scripts/campaign-preview.mjs",
-    "campaign:render": "node scripts/campaign-render.mjs"
+    "campaign:render": "node scripts/campaign-render.mjs",
+    "voiceover": "python3 scripts/voiceover.py"
   },
   "allowScripts": {
     "esbuild": false
